@@ -62,8 +62,4 @@ This uses 3 GPUs on a single node
 Output of each node is logged into ```./logs``` folder with a corresponding log file.
 
 ## Visualizations
-<<<<<<< HEAD
 See [visualizations](./images/readme.md) for additional results and higher quality images from the paper.
-=======
-See [visualizations](./images/readme.md) for additional results and higher quality images from the paper.
->>>>>>> d298e38b6bb056a5c988f10b67602e51333d5d29
