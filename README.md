@@ -1,6 +1,7 @@
 # Memorization-Curvature
 
-This code is the official implementation for the paper, **Memorization Through the Lens of Curvature of Loss Function Around Samples**. This code contains the experiments for the three links described in the paper.
+This code is the official implementation for the paper, 
+**Memorization Through the Lens of Curvature of Loss Function Around Samples**. This code contains the experiments for the three links described in the paper.
 
 Accepted at ICML 2024, if you use this github repo consider citing our work
 ```bibtex
@@ -61,4 +62,8 @@ This uses 3 GPUs on a single node
 Output of each node is logged into ```./logs``` folder with a corresponding log file.
 
 ## Visualizations
+<<<<<<< HEAD
 See [visualizations](./images/readme.md) for additional results and higher quality images from the paper.
+=======
+See [visualizations](./images/readme.md) for additional results and higher quality images from the paper.
+>>>>>>> d298e38b6bb056a5c988f10b67602e51333d5d29
