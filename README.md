@@ -15,8 +15,8 @@ Accepted at ICML 2024 Spotlight (3.5% Acceptance), if you use this github repo c
 
 }
 ```
-Full paper available [paper link](https://openreview.net/forum?id=WQbDS9RydY)
-Also consider looking at our work on Privacy Memorization and Curvature [paper](https://openreview.net/forum?id=4dxR7awO5n), [code](https://github.com/DeepakTatachar/Privacy-Memorization-Curvature).
+Full paper available [paper link](https://openreview.net/forum?id=WQbDS9RydY).
+You may also be interested in our work (ICML '24) on Privacy Memorization and Curvature [paper](https://openreview.net/forum?id=4dxR7awO5n), [code](https://github.com/DeepakTatachar/Privacy-Memorization-Curvature).
 
 ## Setup
 Create a folder ```./pretrained/<dataset name>``` and ```./pretrained/<dataset name>/temp```
