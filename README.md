@@ -1,9 +1,9 @@
-# Memorization-Curvature
+# Memorization-Curvature (ICML 2024 Spotlight)
 
 This code is the official implementation for the paper, 
 **Memorization Through the Lens of Curvature of Loss Function Around Samples**. This code contains the experiments for the three links described in the paper.
 
-Accepted at ICML 2024, if you use this github repo consider citing our work
+Accepted at ICML 2024 Spotlight (3.5% Acceptance), if you use this github repo consider citing our work
 ```bibtex
 @inproceedings{
     garg2024memorization,
@@ -15,6 +15,8 @@ Accepted at ICML 2024, if you use this github repo consider citing our work
 
 }
 ```
+Full paper available [paper link](https://openreview.net/forum?id=WQbDS9RydY)
+Also consider looking at our work on Privacy Memorization and Curvature [paper](https://openreview.net/forum?id=4dxR7awO5n), [code](https://github.com/DeepakTatachar/Privacy-Memorization-Curvature).
 
 ## Setup
 Create a folder ```./pretrained/<dataset name>``` and ```./pretrained/<dataset name>/temp```
