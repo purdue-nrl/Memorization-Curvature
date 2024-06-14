@@ -1,7 +1,7 @@
 # Memorization-Curvature (ICML 2024 Spotlight)
 
 This code is the official implementation for the paper, 
-**Memorization Through the Lens of Curvature of Loss Function Around Samples**. This code contains the experiments for the three links described in the paper.
+**Memorization Through the Lens of Curvature of Loss Function Around Samples**. This code contains the experiments described in the paper.
 
 Accepted at ICML 2024 Spotlight (3.5% Acceptance), if you use this github repo consider citing our work
 ```bibtex
