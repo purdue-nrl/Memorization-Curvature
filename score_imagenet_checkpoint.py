@@ -136,13 +136,13 @@ def main():
             if batch_data.grad is not None:
                 batch_data.grad.zero_()
 
-        curv_estimate = eigs / niter
-        regr_estimate = regr / niter
-        return curv_estimate, regr_estimate
+        eig_estimate = eigs / niter
+        curv_estimate = regr / niter
+        return eig_estimate, curv_estimate
 
     def score_true_labels_and_save(epoch, test, logger, model_name):
         scores = torch.zeros((dataset_len))
-        regr_score = torch.zeros_like(scores)
+        eig_score = torch.zeros_like(scores)
         labels = torch.zeros_like(scores, dtype=torch.long)
         net.eval()
         total = 0
@@ -157,17 +157,17 @@ def main():
             inputs.requires_grad = True
             net.zero_grad()
 
-            curv_estimate, regr_estimate = get_regularized_curvature_for_batch(inputs, targets, h=args.h, niter=10)
+            eig_estimate, curv_estimate = get_regularized_curvature_for_batch(inputs, targets, h=args.h, niter=10)
             scores[idxs] = curv_estimate.detach().clone().cpu()
-            regr_score[idxs] = regr_estimate.detach().clone().cpu()
+            eig_score[idxs] = eig_estimate.detach().clone().cpu()
             labels[idxs] = targets.cpu().detach()
 
         scores_file_name = f"scores_{epoch}_{model_name}_{args.h}.pt" if not test else f"scores_{epoch}_{model_name}_{args.h}_test.pt"
-        regr_file_name = f"regr_scores_{epoch}_{model_name}_{args.h}.pt" if not test else f"regr_scores_{epoch}_{model_name}_{args.h}_test.pt"
+        eig_file_name = f"eig_scores_{epoch}_{model_name}_{args.h}.pt" if not test else f"eig_scores_{epoch}_{model_name}_{args.h}_test.pt"
         labels_file_name = f"true_labels{epoch}_{model_name}_{args.h}.pt" if not test else f"true_labels{epoch}_{model_name}_{args.h}_test.pt"
         logger.info(f"Saving {scores_file_name}")
         torch.save(scores, os.path.join('curv_scores', scores_file_name))
-        torch.save(regr_score, os.path.join('curv_scores', regr_file_name))
+        torch.save(eig_score, os.path.join('curv_scores', eig_file_name))
         torch.save(labels, os.path.join('curv_scores', labels_file_name))
         return
 
